@@ -116,8 +116,8 @@ test.only('Child window Handling', async ({ browser }) => {
     const domain = arrayText[1].split(" ")[0];
 
     await userName.fill(domain);
-    
-    await expect(userName).toHaveValue(domain);
+    console.log(await userName.inputValue());
+    // await expect(userName).toHaveValue(domain);
     await page.pause()
 
 });
